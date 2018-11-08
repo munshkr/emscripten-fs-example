@@ -1,0 +1,15 @@
+{
+  "name": "emscripten-example",
+  "version": "1.0.0",
+  "description": "This is an example project for porting a command-line C program to a JavaScript library using Emscripten.",
+  "main": "index.js",
+  "scripts": {
+    "build": "mkdirp build && cd build && emcmake cmake .. && make && cp-cli example.js ../lib/example.js && cp-cli example.wasm ../lib/example.wasm"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cp-cli": "^1.1.2",
+    "mkdirp": "^0.5.1"
+  }
+}
