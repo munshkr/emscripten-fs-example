@@ -1,12 +1,13 @@
 # emscripten-example
 
-This is an example project for porting a command-line C program to a JavaScript
-library using Emscripten.
+A simple example project for porting a command-line C program to a JavaScript
+library using Emscripten.  Here, the program reads a file and writes its output
+to another file.
 
-* The program reads a file as input and writes another file as output.
-* The JS lib should work both on Node and Browser
-* It should accept the input as a string parameter and return the output as
-  string too.
+There is a [similar example](https://github.com/kripken/xml.js/), but instead
+of writing a *hacky wrapper* using `sed`, this one uses the `MODULARIZE` option
+together with `--pre-js` and `--post-js` wrappers to write input file and read
+output file.
 
 ## Dependencies
 
@@ -14,9 +15,11 @@ library using Emscripten.
 * cmake
 * emscripten
 
-## Develop
+## Usage
 
-Clone the repository and run `make` to build the library.
+Clone the repository and run `npm run build` to build the library.  You can
+then run `npm run test` to test it (check `test.js`).  Also, `npm run
+build:debug` builds the project without optimizations.
 
 ## License
 
