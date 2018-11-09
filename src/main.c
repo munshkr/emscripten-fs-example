@@ -42,5 +42,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    fclose(inf);
+    fclose(outf);
+
     return 0;
 }
