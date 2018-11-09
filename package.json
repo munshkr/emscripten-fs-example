@@ -1,5 +1,5 @@
 {
-  "name": "emscripten-example",
+  "name": "emscripten-fs-example",
   "version": "1.0.0",
   "description": "An example project for porting a command-line C program to a JavaScript library using Emscripten.",
   "main": "index.js",

@@ -1,4 +1,4 @@
-# emscripten-example
+# emscripten-fs-example
 
 A simple example project for porting a command-line C program to a JavaScript
 library using Emscripten.  Here, the program reads a file and writes its output
