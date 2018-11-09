@@ -4,7 +4,10 @@
   "description": "This is an example project for porting a command-line C program to a JavaScript library using Emscripten.",
   "main": "index.js",
   "scripts": {
-    "build": "mkdirp build && cd build && emcmake cmake .. && make && cp-cli example.js ../lib/example.js && cp-cli example.wasm ../lib/example.wasm"
+    "prepare": "npm run build",
+    "build": "npm run build:release",
+    "build:debug": "mkdirp build && cd build && emcmake cmake -DCMAKE_BUILD_TYPE=Debug .. && make && cp-cli example.js ../lib/example.js && cp-cli example.wasm ../lib/example.wasm",
+    "build:release": "mkdirp build && cd build && emcmake cmake -DCMAKE_BUILD_TYPE=Release .. && make && cp-cli example.js ../lib/example.js && cp-cli example.wasm ../lib/example.wasm"
   },
   "author": "",
   "license": "ISC",
