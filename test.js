@@ -1,6 +1,10 @@
-const cat = require('./index.js')
+const assert = require('assert');
+const cat = require('./index.js');
 
 cat('hello there').then(
-  result => console.log('OK, result: ' + result),
-  error => console.error('Something failed: ' + error)
+  result => {
+    assert.equal(result, 'hello there')
+    console.log('Tests OK!')
+  },
+  error => assert.fail(error)
 );
