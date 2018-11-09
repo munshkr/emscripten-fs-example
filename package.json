@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "An example project for porting a command-line C program to a JavaScript library using Emscripten.",
   "main": "index.js",
+  "files": ["index.js", "lib", "README.md", "LICENSE.md", "package.json"],
   "scripts": {
     "test": "node test.js",
     "prepare": "npm run build",
